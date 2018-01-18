@@ -1,0 +1,38 @@
+{
+	"replacements":
+	{
+		"py_to_json_false":
+		{
+			"find": "False([,}\\]])",
+			"replace": "false\\1"
+		},
+		"py_to_json_null":
+		{
+			"find": "None([,}\\]])",
+			"replace": "null\\1"
+		},
+		"py_to_json_quote_close":
+		{
+			"find": "'([:,}\\]])",
+			"name": "py_to_json_quote_close",
+			"replace": "\"\\1"
+		},
+		"py_to_json_quote_open":
+		{
+			"find": "([ {\\[])\\'",
+			"name": "py_to_json_quote_open",
+			"replace": "\\1\""
+		},
+		"py_to_json_quotes":
+		{
+			"find": "(([ ])\\'|\\'([:,}\\]]))",
+			"name": "py_to_json_quotes",
+			"replace": "\\2\"\\3"
+		},
+		"py_to_json_true":
+		{
+			"find": "True([,}\\]])",
+			"replace": "true\\1"
+		}
+	}
+}
